@@ -20,7 +20,7 @@ export default function AuthMiddleware({ children }) {
       }
 
       try {
-        const res = await fetch('http://188.166.198.83:8000/auth/session.php', {
+        const res = await fetch('https://iemsweb.online/auth/session.php', {
           credentials: 'include',
         });
         const data = await res.json();

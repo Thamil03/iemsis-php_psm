@@ -27,7 +27,7 @@ include_once __DIR__ . '/../db.php';
 session_set_cookie_params([
     'lifetime' => 0,
     'path'     => '/',
-    'domain'   => '188.166.198.83:3000',
+    'domain'   => 'iemsweb.online',
     'secure'   => false,    // true if using HTTPS
     'httponly' => true,
     'samesite' => 'Lax'     // or 'None' if necessary

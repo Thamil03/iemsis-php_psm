@@ -51,7 +51,7 @@ const AdminPage = () => {
   const fetchUsers = async () => {
     try {
       const res = await fetch(
-        "http://188.166.198.83:8000/user/UserController.php?action=fetch_all",
+        "https://iemsweb.online/user/UserController.php?action=fetch_all",
         { credentials: "include" }
       );
       const data = await res.json();
@@ -92,7 +92,7 @@ const AdminPage = () => {
   const fetchDropdownData = async () => {
     try {
       const res = await fetch(
-        "http://188.166.198.83:8000/equipment/EquipmentController.php?action=fetch_dropdowns"
+        "https://iemsweb.online/equipment/EquipmentController.php?action=fetch_dropdowns"
       );
       const data = await res.json();
       setCurrentDropdownOptions(data);
@@ -132,7 +132,7 @@ const AdminPage = () => {
 
     try {
       const res = await fetch(
-        "http://188.166.198.83:8000/equipment/EquipmentController.php?action=add_option",
+        "https://iemsweb.online/equipment/EquipmentController.php?action=add_option",
         {
           method: "POST",
           credentials: "include",
@@ -160,7 +160,7 @@ const AdminPage = () => {
   const handleDeleteOption = async (type, value) => {
     try {
       const res = await fetch(
-        "http://188.166.198.83:8000/equipment/EquipmentController.php?action=delete_option",
+        "https://iemsweb.online/equipment/EquipmentController.php?action=delete_option",
         {
           method: "POST",
           credentials: "include",
@@ -235,7 +235,7 @@ const AdminPage = () => {
   const handleResetPassword = async (userId) => {
     if (window.confirm("Are you sure you want to reset this user's password to Default123?")) {
       try {
-        const res = await fetch(`http://188.166.198.83:8000/user/UserController.php?action=reset_password`, {
+        const res = await fetch(`https://iemsweb.online/user/UserController.php?action=reset_password`, {
           method: "POST",
           credentials: "include",
           headers: { "Content-Type": "application/json" },
@@ -269,7 +269,7 @@ const AdminPage = () => {
   const handleToggleActive = async (user) => {
     const newStatus = user.status === "Active" ? "Inactive" : "Active";
     try {
-      const res = await fetch("http://188.166.198.83:8000/user/UserController.php?action=update_status", {
+      const res = await fetch("https://iemsweb.online/user/UserController.php?action=update_status", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -319,7 +319,7 @@ const AdminPage = () => {
     }
 
     try {
-      const res = await fetch("http://188.166.198.83:8000/user/UserController.php?action=add", {
+      const res = await fetch("https://iemsweb.online/user/UserController.php?action=add", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -398,7 +398,7 @@ const AdminPage = () => {
   const handleDeleteUser = async (user) => {
     if (window.confirm(`Are you sure you want to delete user ${user.name}? This action cannot be undone.`)) {
       try {
-        const res = await fetch("http://188.166.198.83:8000/user/UserController.php?action=delete", {
+        const res = await fetch("https://iemsweb.online/user/UserController.php?action=delete", {
           method: "POST",
           credentials: "include",
           headers: { "Content-Type": "application/json" },
@@ -439,7 +439,7 @@ const AdminPage = () => {
       formData.append("role", formDataState.role);
 
       const response = await fetch(
-        "http://188.166.198.83:8000/user/UserController.php",
+        "https://iemsweb.online/user/UserController.php",
         {
           method: "POST",
           credentials: "include",
@@ -467,7 +467,7 @@ const AdminPage = () => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
         const response = await fetch(
-          `http://188.166.198.83:8000/user/UserController.php?action=delete&id=${id}`,
+          `https://iemsweb.online/user/UserController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",
@@ -501,7 +501,7 @@ const AdminPage = () => {
       formData.append("role", formDataState.role);
 
       const response = await fetch(
-        "http://188.166.198.83:8000/user/UserController.php",
+        "https://iemsweb.online/user/UserController.php",
         {
           method: "POST",
           credentials: "include",
@@ -530,7 +530,7 @@ const AdminPage = () => {
   const fetchLogs = async () => {
     try {
       setLogsLoading(true);
-      const url = new URL('http://188.166.198.83:8000/logs/LogController.php');
+      const url = new URL('https://iemsweb.online/logs/LogController.php');
       url.searchParams.append('action', 'fetch_all');
       url.searchParams.append('page', logsPage);
       url.searchParams.append('limit', 10);
@@ -581,7 +581,7 @@ const AdminPage = () => {
   const fetchResetRequests = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://188.166.198.83:8000/user/UserController.php?action=fetch_reset_requests', {
+      const response = await fetch('https://iemsweb.online/user/UserController.php?action=fetch_reset_requests', {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -612,7 +612,7 @@ const AdminPage = () => {
 
   const handleResetRequest = async (requestId, action) => {
     try {
-      const response = await fetch('http://188.166.198.83:8000/user/UserController.php?action=handle_reset_request', {
+      const response = await fetch('https://iemsweb.online/user/UserController.php?action=handle_reset_request', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -636,7 +636,7 @@ const AdminPage = () => {
   useEffect(() => {
     const checkPendingResets = async () => {
       try {
-        const response = await fetch('http://188.166.198.83:8000/user/UserController.php?action=check_pending_resets', {
+        const response = await fetch('https://iemsweb.online/user/UserController.php?action=check_pending_resets', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -1302,7 +1302,7 @@ const AdminPage = () => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                fetch("http://188.166.198.83:8000/user/UserController.php?action=update", {
+                fetch("https://iemsweb.online/user/UserController.php?action=update", {
                   method: "POST",
                   credentials: "include",
                   headers: { "Content-Type": "application/json" },
