@@ -6,7 +6,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 $host = "db-mysql-nyc3-88224-do-user-22958682-0.l.db.ondigitalocean.com";
 $user = "doadmin";
 $pass = "AVNS_uLb7iZGvlPLSuxlXYUW";
-$dbname = "iemsis";
+$dbname = "defaultdb";
 $port = "25060";
 
 $conn = new mysqli($host, $user, $pass, $dbname, $port);
