@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     const res = await fetch('http://157.230.245.190:8000/auth/login.php', {
       method: 'POST',
-      ,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
     });
@@ -32,7 +31,6 @@ export const AuthProvider = ({ children }) => {
   const register = async (name, email, password) => {
     const res = await fetch('http://157.230.245.190:8000/auth/register.php', {
       method: 'POST',
-      ,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password })
     });
