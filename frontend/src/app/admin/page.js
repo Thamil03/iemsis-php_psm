@@ -51,7 +51,7 @@ const AdminPage = () => {
   const fetchUsers = async () => {
     try {
       const res = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php?action=fetch_all",
+        "https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php?action=fetch_all",
         { credentials: "include" }
       );
       const data = await res.json();
@@ -92,7 +92,7 @@ const AdminPage = () => {
   const fetchDropdownData = async () => {
     try {
       const res = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=fetch_dropdowns"
+        "https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=fetch_dropdowns"
       );
       const data = await res.json();
       setCurrentDropdownOptions(data);
@@ -132,7 +132,7 @@ const AdminPage = () => {
 
     try {
       const res = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=add_option",
+        "https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=add_option",
         {
           method: "POST",
           credentials: "include",
@@ -160,7 +160,7 @@ const AdminPage = () => {
   const handleDeleteOption = async (type, value) => {
     try {
       const res = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=delete_option",
+        "https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/equipment/EquipmentController.php?action=delete_option",
         {
           method: "POST",
           credentials: "include",
@@ -235,7 +235,7 @@ const AdminPage = () => {
   const handleResetPassword = async (userId) => {
     if (window.confirm("Are you sure you want to reset this user's password to Default123?")) {
       try {
-        const res = await fetch(`http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=reset_password`, {
+        const res = await fetch(`https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=reset_password`, {
           method: "POST",
           credentials: "include",
           headers: { "Content-Type": "application/json" },
@@ -269,7 +269,7 @@ const AdminPage = () => {
   const handleToggleActive = async (user) => {
     const newStatus = user.status === "Active" ? "Inactive" : "Active";
     try {
-      const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=update_status", {
+      const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=update_status", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -319,7 +319,7 @@ const AdminPage = () => {
     }
 
     try {
-      const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=add", {
+      const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=add", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -398,7 +398,7 @@ const AdminPage = () => {
   const handleDeleteUser = async (user) => {
     if (window.confirm(`Are you sure you want to delete user ${user.name}? This action cannot be undone.`)) {
       try {
-        const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=delete", {
+        const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=delete", {
           method: "POST",
           credentials: "include",
           headers: { "Content-Type": "application/json" },
@@ -439,7 +439,7 @@ const AdminPage = () => {
       formData.append("role", formDataState.role);
 
       const response = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php",
+        "https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php",
         {
           method: "POST",
           credentials: "include",
@@ -467,7 +467,7 @@ const AdminPage = () => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
         const response = await fetch(
-          `http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php?action=delete&id=${id}`,
+          `https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",
@@ -501,7 +501,7 @@ const AdminPage = () => {
       formData.append("role", formDataState.role);
 
       const response = await fetch(
-        "http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php",
+        "https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/user/UserController.php",
         {
           method: "POST",
           credentials: "include",
@@ -530,7 +530,7 @@ const AdminPage = () => {
   const fetchLogs = async () => {
     try {
       setLogsLoading(true);
-      const url = new URL('http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/logs/LogController.php');
+      const url = new URL('https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/logs/LogController.php');
       url.searchParams.append('action', 'fetch_all');
       url.searchParams.append('page', logsPage);
       url.searchParams.append('limit', 10);
@@ -581,7 +581,7 @@ const AdminPage = () => {
   const fetchResetRequests = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=fetch_reset_requests', {
+      const response = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=fetch_reset_requests', {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -612,7 +612,7 @@ const AdminPage = () => {
 
   const handleResetRequest = async (requestId, action) => {
     try {
-      const response = await fetch('http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=handle_reset_request', {
+      const response = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=handle_reset_request', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -636,7 +636,7 @@ const AdminPage = () => {
   useEffect(() => {
     const checkPendingResets = async () => {
       try {
-        const response = await fetch('http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
+        const response = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -678,7 +678,7 @@ const AdminPage = () => {
           onClick={() => setShowResetNotification(false)}
           className="text-white hover:text-blue-100"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
         </button>
@@ -765,7 +765,7 @@ const AdminPage = () => {
                         onClick={() => fetchUsers()}
                         className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                       </button>
@@ -775,7 +775,7 @@ const AdminPage = () => {
                       className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="https://www.w3.org/2000/svg"
                         className="h-4 w-4 mr-1"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -842,7 +842,7 @@ const AdminPage = () => {
                                   className="text-blue-600 hover:text-blue-800"
                                   title="Edit user"
                                 >
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                   </svg>
                                 </button>
@@ -854,7 +854,7 @@ const AdminPage = () => {
                                     }`}
                                   title={user.status === "Active" ? "Deactivate user" : "Activate user"}
                                 >
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                   </svg>
                                 </button>
@@ -863,7 +863,7 @@ const AdminPage = () => {
                                   className="text-yellow-600 hover:text-yellow-800"
                                   title="Reset password"
                                 >
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                                   </svg>
                                 </button>
@@ -872,7 +872,7 @@ const AdminPage = () => {
                                   className="text-red-600 hover:text-red-800"
                                   title="Delete user"
                                 >
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                   </svg>
                                 </button>
@@ -886,7 +886,7 @@ const AdminPage = () => {
                 ) : (
                   <div className="bg-white p-6 text-center rounded-lg shadow-md">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-12 w-12 mx-auto text-gray-400 mb-4"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -972,7 +972,7 @@ const AdminPage = () => {
                       className="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded text-sm flex items-center"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="https://www.w3.org/2000/svg"
                         className="h-4 w-4 mr-1"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -991,7 +991,7 @@ const AdminPage = () => {
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="https://www.w3.org/2000/svg"
                             className="h-5 w-5 text-gray-400"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -1045,7 +1045,7 @@ const AdminPage = () => {
                               {category} ({options.length})
                             </h4>
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns="https://www.w3.org/2000/svg"
                               className={`h-5 w-5 transition-transform ${expandedCategories[category] ? "transform rotate-180" : ""
                                 }`}
                               fill="none"
@@ -1074,7 +1074,7 @@ const AdminPage = () => {
                                       title="Delete option"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns="https://www.w3.org/2000/svg"
                                         className="h-4 w-4"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -1099,7 +1099,7 @@ const AdminPage = () => {
                   ) : (
                     <div className="text-center py-8">
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="https://www.w3.org/2000/svg"
                         className="h-12 w-12 mx-auto text-gray-400 mb-2"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -1173,7 +1173,7 @@ const AdminPage = () => {
                                     className="text-green-600 hover:text-green-800"
                                     title="Approve request"
                                   >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
                                   </button>
@@ -1182,7 +1182,7 @@ const AdminPage = () => {
                                     className="text-red-600 hover:text-red-800"
                                     title="Reject request"
                                   >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                   </button>
@@ -1294,7 +1294,7 @@ const AdminPage = () => {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-gray-800">Edit User</h2>
               <button onClick={() => setShowEditModal(false)} className="text-gray-500 hover:text-gray-700" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -1302,7 +1302,7 @@ const AdminPage = () => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                fetch("http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=update", {
+                fetch("https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=update", {
                   method: "POST",
                   credentials: "include",
                   headers: { "Content-Type": "application/json" },
@@ -1434,7 +1434,7 @@ const AdminPage = () => {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-gray-800">Add New User</h2>
               <button onClick={() => setShowAddModal(false)} className="text-gray-500 hover:text-gray-700" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -1541,7 +1541,7 @@ const AdminPage = () => {
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-gray-800">Delete Option</h2>
               <button onClick={() => setShowDeleteOptionModal(false)} className="text-gray-500 hover:text-gray-700" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

@@ -1,6 +1,6 @@
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header("Access-Control-Allow-Origin: http://dolphin-app-gllbf.ondigitalocean.app");
+header("Access-Control-Allow-Origin: https://dolphin-app-gllbf.ondigitalocean.app");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");

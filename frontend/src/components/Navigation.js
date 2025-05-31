@@ -14,7 +14,7 @@ export default function Navigation() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php", {
+        const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function Navigation() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/logout.php", {
+      await fetch("https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/logout.php", {
         method: "POST",
         credentials: "include",
       });
@@ -143,10 +143,10 @@ export default function Navigation() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-blue-800 focus:outline-none transition-colors duration-200"
             >
-              <svg className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`} xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-              <svg className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`} xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>

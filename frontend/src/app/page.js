@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/notifications/NotificationsController.php");
+        const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/notifications/NotificationsController.php");
         const data = await res.json();
         const now = new Date();
         const activeNotifs = data.filter((n) => {
@@ -92,7 +92,7 @@ export default function Home() {
   const handleSearch = async () => {
     if (!searchNumber.trim()) return alert("Please enter a number to search.");
     try {
-      const res = await fetch(`http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php?search=${searchNumber}`);
+      const res = await fetch(`https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php?search=${searchNumber}`);
       const data = await res.json();
 
       // Filter results for exact matches when searching by No. Resit
@@ -130,7 +130,7 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=forgot_password', {
+      const response = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=forgot_password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -478,7 +478,7 @@ export default function Home() {
                 className="text-gray-500 hover:text-gray-700"
                 aria-label="Close"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

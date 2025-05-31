@@ -24,7 +24,7 @@
  *      - XAMPP Control Panel → Start Apache & MySQL
  *      - Or: sudo service apache2 start && sudo service mysql start
  *
- * 4a. Browser: open http://localhost/iemsis-php/generate_user.php
+ * 4a. Browser: open https://localhost/iemsis-php/generate_user.php
  * 4b. CLI:  cd path/to/iemsis-php && php generate_user.php
  */
 

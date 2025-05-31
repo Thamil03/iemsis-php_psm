@@ -27,7 +27,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php", {
+        const res = await fetch("https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -43,7 +43,7 @@ export default function Dashboard() {
 
     const fetchEquipmentData = async () => {
       try {
-        const res = await fetch(`http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php?action=fetch_all&year=${selectedYear}`);
+        const res = await fetch(`https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php?action=fetch_all&year=${selectedYear}`);
         const items = await res.json();
 
         let belumSelesaiCount = 0;
@@ -121,7 +121,7 @@ export default function Dashboard() {
   useEffect(() => {
     const checkPendingResets = async () => {
       try {
-        const response = await fetch('http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
+        const response = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -163,7 +163,7 @@ export default function Dashboard() {
           onClick={() => setShowResetNotification(false)}
           className="text-white hover:text-blue-100"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="https://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
         </button>
@@ -254,7 +254,7 @@ export default function Dashboard() {
                   
                   <div className="bg-red-100 p-3 rounded-full">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-6 w-6 text-red-500"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -287,7 +287,7 @@ export default function Dashboard() {
                   
                   <div className="bg-green-100 p-3 rounded-full">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-6 w-6 text-purple-500"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -318,7 +318,7 @@ export default function Dashboard() {
                   </div>
                   <div className="bg-yellow-100 p-3 rounded-full">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-6 w-6 text-yellow-500"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -350,7 +350,7 @@ export default function Dashboard() {
                   
                   <div className="bg-green-100 p-3 rounded-full">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-6 w-6 text-green-600"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -381,7 +381,7 @@ export default function Dashboard() {
                   </div>
                   <div className="bg-blue-100 p-3 rounded-full">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://www.w3.org/2000/svg"
                       className="h-6 w-6 text-blue-500"
                       fill="none"
                       viewBox="0 0 24 24"
