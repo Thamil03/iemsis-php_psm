@@ -71,7 +71,7 @@ export default function MaintenancePage() {
     if (window.confirm("Are you sure you want to delete this maintenance record?")) {
       try {
         const response = await fetch(
-          `http://157.230.245.190:3000/maintenance/MaintenanceController.php?action=delete&id=${id}`,
+          `http://157.230.245.190:8000/maintenance/MaintenanceController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",
@@ -105,8 +105,8 @@ export default function MaintenancePage() {
     }
 
     const url = editingId
-      ? `http://157.230.245.190:3000/backend/maintenance/update.php?id=${editingId}`
-      : "http://157.230.245.190:3000/backend/maintenance/add.php";
+      ? `http://157.230.245.190:8000/backend/maintenance/update.php?id=${editingId}`
+      : "http://157.230.245.190:8000/backend/maintenance/add.php";
 
     try {
       await fetch(url, {

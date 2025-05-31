@@ -78,7 +78,7 @@ export default function EquipmentPage() {
   const [dropdowns, setDropdowns] = useState({});
 
   const equipmentBaseUrl =
-    "http://157.230.245.190:3000/equipment/EquipmentController.php";
+    "http://157.230.245.190:8000/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {
