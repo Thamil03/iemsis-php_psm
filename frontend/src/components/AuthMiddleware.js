@@ -20,7 +20,7 @@ export default function AuthMiddleware({ children }) {
       }
 
       try {
-        const res = await fetch('http://157.230.245.190/auth/session.php', {
+        const res = await fetch('http://157.230.245.190:3000/auth/session.php', {
           credentials: 'include',
         });
         const data = await res.json();

@@ -2,11 +2,11 @@
 session_start();
 include('../db.php');
 
-//header"Access-Control-Allow-Origin: http://157.230.245.190");
-//header"Access-Control-Allow-Credentials: true");
-//header"Access-Control-Allow-Headers: Content-Type");
-//header"Access-Control-Allow-Methods: GET");
-//header"Content-Type: application/json");
+header("Access-Control-Allow-Origin: http://157.230.245.190:3000");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET");
+header("Content-Type: application/json");
 
 // Check if there's an active session requiring password reset
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['password_reset_required'])) {

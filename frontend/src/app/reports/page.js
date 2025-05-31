@@ -29,7 +29,7 @@ export default function ReportsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const equipmentBaseUrl = "http://157.230.245.190/equipment/EquipmentController.php";
+  const equipmentBaseUrl = "http://157.230.245.190:3000/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {
