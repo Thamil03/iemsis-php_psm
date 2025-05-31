@@ -1,0 +1,34 @@
+{
+  "name": "iemsis",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && next dev --turbopack",
+    "build": "cd frontend && next build",
+    "start": "cd frontend && next start",
+    "lint": "cd frontend && next lint"
+  },
+  "dependencies": {
+    "@firebasegen/default-connector": "file:frontend/dataconnect-generated/js/default-connector",
+    "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^4.1.3",
+    "firebase": "^11.4.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23",
+    "next": "15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "react-to-print": "^3.0.5",
+    "react-toastify": "^11.0.5",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "tailwindcss": "^4"
+  }
+}
