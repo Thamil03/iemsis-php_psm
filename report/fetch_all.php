@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: application/json');
+//header'Content-Type: application/json');
 
 $host = "db-mysql-nyc3-88224-do-user-22958682-0.l.db.ondigitalocean.com";
 $user = "doadmin";

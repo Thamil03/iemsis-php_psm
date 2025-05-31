@@ -2,11 +2,11 @@
 session_start();
 include('../db.php');
 
-header("Access-Control-Allow-Origin: http://188.166.227.229");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Content-Type: application/json");
+//header"Access-Control-Allow-Origin: http://188.166.227.229");
+//header"Access-Control-Allow-Credentials: true");
+//header"Access-Control-Allow-Headers: Content-Type");
+//header"Access-Control-Allow-Methods: POST, OPTIONS");
+//header"Content-Type: application/json");
 
 // Handle OPTIONS preflight requests
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
