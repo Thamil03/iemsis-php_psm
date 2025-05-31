@@ -14,7 +14,7 @@ export default function Navigation() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("https://iemsweb.online/auth/session.php", {
+        const res = await fetch("http://188.166.198.83:8001/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function Navigation() {
 
   const handleLogout = async () => {
     try {
-      await fetch("https://iemsweb.online/auth/logout.php", {
+      await fetch("http://188.166.198.83:8001/auth/logout.php", {
         method: "POST",
         credentials: "include",
       });

@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: https://iemsweb.online');
+header('Access-Control-Allow-Origin: http://iemsweb.online');
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Content-Type: application/json");
