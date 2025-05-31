@@ -14,7 +14,7 @@ export default function Navigation() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost/iemsis-php/auth/session.php", {
+        const res = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function Navigation() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost/iemsis-php/auth/logout.php", {
+      await fetch("http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/logout.php", {
         method: "POST",
         credentials: "include",
       });

@@ -16,7 +16,7 @@ export default function NotificationsPage() {
   });
 
   const baseUrl =
-    "http://localhost/IEMSIS-PHP/notifications/NotificationsController.php";
+    "http://dolphin-app-gllbf.ondigitalocean.app/IEMSIS-PHP/notifications/NotificationsController.php";
 
   useEffect(() => {
     fetchNotifications();

@@ -39,7 +39,7 @@ export default function MaintenancePage() {
 
   const fetchMaintenanceRecords = async () => {
     try {
-      const response = await fetch("http://localhost/backend/maintenance/fetch_all.php");
+      const response = await fetch("http://dolphin-app-gllbf.ondigitalocean.app/backend/maintenance/fetch_all.php");
       const data = await response.json();
       setMaintenanceRecords(data);
     } catch (error) {
@@ -71,7 +71,7 @@ export default function MaintenancePage() {
     if (window.confirm("Are you sure you want to delete this maintenance record?")) {
       try {
         const response = await fetch(
-          `http://localhost/iemsis-php/maintenance/MaintenanceController.php?action=delete&id=${id}`,
+          `http://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/maintenance/MaintenanceController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",
@@ -105,8 +105,8 @@ export default function MaintenancePage() {
     }
 
     const url = editingId
-      ? `http://localhost/backend/maintenance/update.php?id=${editingId}`
-      : "http://localhost/backend/maintenance/add.php";
+      ? `http://dolphin-app-gllbf.ondigitalocean.app/backend/maintenance/update.php?id=${editingId}`
+      : "http://dolphin-app-gllbf.ondigitalocean.app/backend/maintenance/add.php";
 
     try {
       await fetch(url, {
