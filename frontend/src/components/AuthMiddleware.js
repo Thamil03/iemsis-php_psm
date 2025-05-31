@@ -20,7 +20,7 @@ export default function AuthMiddleware({ children }) {
       }
 
       try {
-        const res = await fetch('http://188.166.227.229/iemsis-php/auth/session.php', {
+        const res = await fetch('http://157.230.245.190/auth/session.php', {
           credentials: 'include',
         });
         const data = await res.json();

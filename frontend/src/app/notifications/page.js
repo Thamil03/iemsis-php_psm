@@ -16,7 +16,7 @@ export default function NotificationsPage() {
   });
 
   const baseUrl =
-    "http://188.166.227.229/IEMSIS-PHP/notifications/NotificationsController.php";
+    "http://157.230.245.190/notifications/NotificationsController.php";
 
   useEffect(() => {
     fetchNotifications();
