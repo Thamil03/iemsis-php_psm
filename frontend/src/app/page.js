@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch("https://iemsweb.online/notifications/NotificationsController.php");
+        const res = await fetch("https://iemsweb.online/notification/NotificationsController.php");
         const data = await res.json();
         const now = new Date();
         const activeNotifs = data.filter((n) => {
