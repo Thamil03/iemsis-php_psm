@@ -11,7 +11,7 @@ require_once __DIR__ . '/../config/session.php';
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header("Access-Control-Allow-Origin: https://192.241.158.116");
+header("Access-Control-Allow-Origin: https://152.42.242.10");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");

@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch("https://192.241.158.116/iemsis-php/notifications/NotificationsController.php");
+        const res = await fetch("https://152.42.242.10/iemsis-php/notifications/NotificationsController.php");
         const data = await res.json();
         const now = new Date();
         const activeNotifs = data.filter((n) => {
@@ -92,7 +92,7 @@ export default function Home() {
   const handleSearch = async () => {
     if (!searchNumber.trim()) return alert("Please enter a number to search.");
     try {
-      const res = await fetch(`https://192.241.158.116/iemsis-php/equipment/EquipmentController.php?search=${searchNumber}`);
+      const res = await fetch(`https://152.42.242.10/iemsis-php/equipment/EquipmentController.php?search=${searchNumber}`);
       const data = await res.json();
 
       // Filter results for exact matches when searching by No. Resit
@@ -130,7 +130,7 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch('https://192.241.158.116/IEMSIS-PHP/user/UserController.php?action=forgot_password', {
+      const response = await fetch('https://152.42.242.10/IEMSIS-PHP/user/UserController.php?action=forgot_password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

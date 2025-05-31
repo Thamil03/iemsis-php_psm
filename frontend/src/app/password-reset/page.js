@@ -25,7 +25,7 @@ export default function PasswordReset() {
     // We'll make an API call to check if password reset is required for current session
     const checkResetStatus = async () => {
       try {
-        const res = await fetch('http://192.241.158.116/iemsis-php/auth/check_reset_status.php', {
+        const res = await fetch('http://152.42.242.10/iemsis-php/auth/check_reset_status.php', {
           method: 'GET',
           credentials: 'include', // Important to send cookies/session
         });
@@ -66,7 +66,7 @@ export default function PasswordReset() {
     }
 
     try {
-      const res = await fetch('http://192.241.158.116/iemsis-php/auth/reset_password.php', {
+      const res = await fetch('http://152.42.242.10/iemsis-php/auth/reset_password.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
