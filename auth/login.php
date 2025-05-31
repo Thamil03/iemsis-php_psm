@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // ✅ CORS headers
 header('Access-Control-Allow-Origin: http://157.230.245.190:3000');
 header("Access-Control-Allow-Credentials: true");
@@ -16,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
+
+session_start();
 
 // ✅ Parse incoming JSON
 $data = json_decode(file_get_contents("php://input"), true);
