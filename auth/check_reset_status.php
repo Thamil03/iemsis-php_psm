@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include('../db.php');
 
 header("Access-Control-Allow-Origin: https://dolphin-app-gllbf.ondigitalocean.app");
 header("Access-Control-Allow-Credentials: true");

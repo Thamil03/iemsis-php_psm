@@ -78,7 +78,7 @@ export default function EquipmentPage() {
   const [dropdowns, setDropdowns] = useState({});
 
   const equipmentBaseUrl =
-    "https://dolphin-app-gllbf.ondigitalocean.app/equipment/EquipmentController.php";
+    "https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {

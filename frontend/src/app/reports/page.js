@@ -29,7 +29,7 @@ export default function ReportsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const equipmentBaseUrl = "https://dolphin-app-gllbf.ondigitalocean.app/equipment/EquipmentController.php";
+  const equipmentBaseUrl = "https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {

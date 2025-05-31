@@ -13,7 +13,7 @@ export default function ForgotPassword() {
       return;
     }
     try {
-      const res = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/auth/forgot_password.php', {
+      const res = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/forgot_password.php', {
         method: 'POST',
         credentials: "include",
         headers: { 'Content-Type': 'application/json' },

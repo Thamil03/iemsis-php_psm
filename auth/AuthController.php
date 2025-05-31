@@ -7,7 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Include session configuration
-require_once __DIR__ . '/config/session.php';
+require_once __DIR__ . '/../config/session.php';
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Include the shared database connection
-include_once __DIR__ . 'db.php';
+include_once __DIR__ . '/../db.php';
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $action = isset($_GET['action']) ? $_GET['action'] : '';

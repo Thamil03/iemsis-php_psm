@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // 2) DB connection
-include_once __DIR__ . 'db.php';
+include_once __DIR__ . '/../db.php';
 
 // 3) Start session (must come *before* you read $_SESSION)
 if (session_status() === PHP_SESSION_NONE) {

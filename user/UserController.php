@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Include the shared database connection
-include_once __DIR__ . 'db.php';
+include_once __DIR__ . '/../db.php';
 
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {

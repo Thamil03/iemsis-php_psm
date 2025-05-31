@@ -9,7 +9,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Content-Type: application/json");
 
 // ✅ Include DB connection
-include('db.php');
+include('../db.php');
 
 // ✅ Handle preflight OPTIONS request
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
