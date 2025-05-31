@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-include_once __DIR__ . 'db.php'; // DB connection
+include_once __DIR__ . '/../db.php'; // DB connection
 
 // Logging function
 function logAction($action, $description) {
