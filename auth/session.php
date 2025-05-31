@@ -2,7 +2,7 @@
 include('../db.php');
 session_start();
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Credentials: true");
+//header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
 if (isset($_SESSION['user_id'])) {
