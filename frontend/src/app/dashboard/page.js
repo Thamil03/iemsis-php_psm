@@ -27,7 +27,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch("http://157.230.245.190:3000/auth/session.php", {
+        const res = await fetch("http://157.230.245.190:8000/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();

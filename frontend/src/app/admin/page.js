@@ -269,7 +269,7 @@ const AdminPage = () => {
   const handleToggleActive = async (user) => {
     const newStatus = user.status === "Active" ? "Inactive" : "Active";
     try {
-      const res = await fetch("http://157.230.245.190:3000/user/UserController.php?action=update_status", {
+      const res = await fetch("http://157.230.245.190:8000/user/UserController.php?action=update_status", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -319,7 +319,7 @@ const AdminPage = () => {
     }
 
     try {
-      const res = await fetch("http://157.230.245.190:3000/user/UserController.php?action=add", {
+      const res = await fetch("http://157.230.245.190:8000/user/UserController.php?action=add", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -398,7 +398,7 @@ const AdminPage = () => {
   const handleDeleteUser = async (user) => {
     if (window.confirm(`Are you sure you want to delete user ${user.name}? This action cannot be undone.`)) {
       try {
-        const res = await fetch("http://157.230.245.190:3000/user/UserController.php?action=delete", {
+        const res = await fetch("http://157.230.245.190:8000/user/UserController.php?action=delete", {
           method: "POST",
           credentials: "include",
           headers: { "Content-Type": "application/json" },
@@ -1302,7 +1302,7 @@ const AdminPage = () => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                fetch("http://157.230.245.190:3000/user/UserController.php?action=update", {
+                fetch("http://157.230.245.190:8000/user/UserController.php?action=update", {
                   method: "POST",
                   credentials: "include",
                   headers: { "Content-Type": "application/json" },

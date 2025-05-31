@@ -39,7 +39,7 @@ export default function MaintenancePage() {
 
   const fetchMaintenanceRecords = async () => {
     try {
-      const response = await fetch("http://157.230.245.190:3000/backend/maintenance/fetch_all.php");
+      const response = await fetch("http://157.230.245.190:8000/backend/maintenance/fetch_all.php");
       const data = await response.json();
       setMaintenanceRecords(data);
     } catch (error) {

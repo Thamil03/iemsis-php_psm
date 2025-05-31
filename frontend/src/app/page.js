@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch("http://157.230.245.190:3000/notifications/NotificationsController.php");
+        const res = await fetch("http://157.230.245.190:8000/notifications/NotificationsController.php");
         const data = await res.json();
         const now = new Date();
         const activeNotifs = data.filter((n) => {
