@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-header('Access-Control-Allow-Origin: 157.230.245.190:8000');
-//header("Access-Control-Allow-Credentials: true");
+header('Access-Control-Allow-Origin: 157.230.245.190:3000');
+header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
 // Unset all session variables
