@@ -12,10 +12,10 @@ header("Content-Type: application/json");
 include('../db.php');
 
 // ✅ Handle preflight OPTIONS request
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit;
-}
+//if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+//    http_response_code(200);
+//    exit;
+//}
 
 // ✅ Parse incoming JSON
 $data = json_decode(file_get_contents("php://input"), true);
