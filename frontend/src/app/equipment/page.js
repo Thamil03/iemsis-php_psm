@@ -78,7 +78,7 @@ export default function EquipmentPage() {
   const [dropdowns, setDropdowns] = useState({});
 
   const equipmentBaseUrl =
-    "http://152.42.242.10/iemsis-php/equipment/EquipmentController.php";
+    "http://188.166.227.229/iemsis-php/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {

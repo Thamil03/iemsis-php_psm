@@ -27,7 +27,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch("http://152.42.242.10/iemsis-php/auth/session.php", {
+        const res = await fetch("http://188.166.227.229/iemsis-php/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -43,7 +43,7 @@ export default function Dashboard() {
 
     const fetchEquipmentData = async () => {
       try {
-        const res = await fetch(`http://152.42.242.10/iemsis-php/equipment/EquipmentController.php?action=fetch_all&year=${selectedYear}`);
+        const res = await fetch(`http://188.166.227.229/iemsis-php/equipment/EquipmentController.php?action=fetch_all&year=${selectedYear}`);
         const items = await res.json();
 
         let belumSelesaiCount = 0;
@@ -121,7 +121,7 @@ export default function Dashboard() {
   useEffect(() => {
     const checkPendingResets = async () => {
       try {
-        const response = await fetch('http://152.42.242.10/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
+        const response = await fetch('http://188.166.227.229/IEMSIS-PHP/user/UserController.php?action=check_pending_resets', {
           credentials: 'include'
         });
         const data = await response.json();
