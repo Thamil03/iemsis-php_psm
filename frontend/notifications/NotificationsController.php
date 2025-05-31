@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Include the shared database connection
-include_once __DIR__ . '/db.php';
+include_once __DIR__ . 'db.php';
 
 // Ensure the session cookie can be sent from your React app
 session_set_cookie_params([

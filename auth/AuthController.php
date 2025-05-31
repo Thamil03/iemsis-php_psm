@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Include the shared database connection
-include_once __DIR__ . '/db.php';
+include_once __DIR__ . 'db.php';
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $action = isset($_GET['action']) ? $_GET['action'] : '';
