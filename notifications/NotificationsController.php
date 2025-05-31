@@ -27,7 +27,7 @@ include_once __DIR__ . '/../db.php';
 session_set_cookie_params([
     'lifetime' => 0,
     'path'     => '/',
-    'domain'   => 'localhost',
+    'domain'   => 'dolphin-app-gllbf.ondigitalocean.app',
     'secure'   => false,    // true if using HTTPS
     'httponly' => true,
     'samesite' => 'Lax'     // or 'None' if necessary
