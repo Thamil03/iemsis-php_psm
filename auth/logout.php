@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: http://dolphin-app-gllbf.ondigitalocean.app");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
