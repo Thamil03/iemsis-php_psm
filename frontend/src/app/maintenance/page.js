@@ -71,7 +71,7 @@ export default function MaintenancePage() {
     if (window.confirm("Are you sure you want to delete this maintenance record?")) {
       try {
         const response = await fetch(
-          `https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/maintenance/MaintenanceController.php?action=delete&id=${id}`,
+          `https://dolphin-app-gllbf.ondigitalocean.app/maintenance/MaintenanceController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",

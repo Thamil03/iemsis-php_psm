@@ -5,8 +5,8 @@
  *
  * Instructions:
  * 1. Copy this file and db.php into your project folder:
- *      XAMPP (Windows): C:/xampp/htdocs/iemsis-php/
- *      LAMP   (Linux):  /var/www/html/iemsis-php/
+ *      XAMPP (Windows): C:/xampp/htdocs/
+ *      LAMP   (Linux):  /var/www/html/
  *
  * 2. Update db.php with your MySQL credentials and database name.
  *    Example db.php:
@@ -24,7 +24,7 @@
  *      - XAMPP Control Panel → Start Apache & MySQL
  *      - Or: sudo service apache2 start && sudo service mysql start
  *
- * 4a. Browser: open https://localhost/iemsis-php/generate_user.php
+ * 4a. Browser: open https://localhost/generate_user.php
  * 4b. CLI:  cd path/to/iemsis-php && php generate_user.php
  */
 
