@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header("Access-Control-Allow-Origin: https://dolphin-app-gllbf.ondigitalocean.app");
+header("Access-Control-Allow-Origin: https://192.241.158.116");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Include the shared database connection
-include_once __DIR__ . '/../db.php';
+include_once __DIR__ . 'db.php';
 
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {

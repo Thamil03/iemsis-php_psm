@@ -20,7 +20,7 @@ export default function AuthMiddleware({ children }) {
       }
 
       try {
-        const res = await fetch('https://dolphin-app-gllbf.ondigitalocean.app/iemsis-php/auth/session.php', {
+        const res = await fetch('https://192.241.158.116/iemsis-php/auth/session.php', {
           credentials: 'include',
         });
         const data = await res.json();

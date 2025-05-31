@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: http://dolphin-app-gllbf.ondigitalocean.app');
+header('Access-Control-Allow-Origin: http://192.241.158.116');
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
@@ -27,7 +27,7 @@ include_once __DIR__ . '/../db.php';
 session_set_cookie_params([
     'lifetime' => 0,
     'path'     => '/',
-    'domain'   => 'dolphin-app-gllbf.ondigitalocean.app',
+    'domain'   => '192.241.158.116',
     'secure'   => false,    // true if using HTTPS
     'httponly' => true,
     'samesite' => 'Lax'     // or 'None' if necessary

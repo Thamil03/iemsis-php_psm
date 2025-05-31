@@ -2,7 +2,7 @@
 session_start();
 include('../db.php');
 
-header("Access-Control-Allow-Origin: https://dolphin-app-gllbf.ondigitalocean.app");
+header("Access-Control-Allow-Origin: https://192.241.158.116");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: POST, OPTIONS");

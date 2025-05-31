@@ -6,11 +6,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Include session configuration
-require_once __DIR__ . '/../config/session.php';
+require_once __DIR__ . '../config/session.php';
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header("Access-Control-Allow-Origin: https://dolphin-app-gllbf.ondigitalocean.app");
+header("Access-Control-Allow-Origin: https://192.241.158.116");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-include_once __DIR__ . '/../db.php'; // DB connection
+include_once __DIR__ . 'db.php'; // DB connection
 
 // Logging function
 function logAction($action, $description) {
