@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
   // Check login session
   useEffect(() => {
-    fetch('http://157.230.245.190:3000/auth/session.php', {
+    fetch('http://157.230.245.190:8000/auth/session.php', {
       credentials: 'include'
     })
       .then(res => res.json())
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (name, email, password) => {
-    const res = await fetch('http://157.230.245.190:3000/auth/register.php', {
+    const res = await fetch('http://157.230.245.190:8000/auth/register.php', {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await fetch('http://157.230.245.190:3000/auth/logout.php', {
+    await fetch('http://157.230.245.190:8000/auth/logout.php', {
       method: 'POST',
       credentials: 'include'
     });
