@@ -29,7 +29,7 @@ export default function ReportsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const equipmentBaseUrl = "https://152.42.242.10/iemsis-php/equipment/EquipmentController.php";
+  const equipmentBaseUrl = "http://152.42.242.10/iemsis-php/equipment/EquipmentController.php";
 
   // Read URL parameters on initial load
   useEffect(() => {

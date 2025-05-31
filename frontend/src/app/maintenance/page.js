@@ -39,7 +39,7 @@ export default function MaintenancePage() {
 
   const fetchMaintenanceRecords = async () => {
     try {
-      const response = await fetch("https://152.42.242.10/backend/maintenance/fetch_all.php");
+      const response = await fetch("http://152.42.242.10/backend/maintenance/fetch_all.php");
       const data = await response.json();
       setMaintenanceRecords(data);
     } catch (error) {
@@ -71,7 +71,7 @@ export default function MaintenancePage() {
     if (window.confirm("Are you sure you want to delete this maintenance record?")) {
       try {
         const response = await fetch(
-          `https://152.42.242.10/iemsis-php/maintenance/MaintenanceController.php?action=delete&id=${id}`,
+          `http://152.42.242.10/iemsis-php/maintenance/MaintenanceController.php?action=delete&id=${id}`,
           {
             method: "DELETE",
             credentials: "include",
@@ -105,8 +105,8 @@ export default function MaintenancePage() {
     }
 
     const url = editingId
-      ? `https://152.42.242.10/backend/maintenance/update.php?id=${editingId}`
-      : "https://152.42.242.10/backend/maintenance/add.php";
+      ? `http://152.42.242.10/backend/maintenance/update.php?id=${editingId}`
+      : "http://152.42.242.10/backend/maintenance/add.php";
 
     try {
       await fetch(url, {

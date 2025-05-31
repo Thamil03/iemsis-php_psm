@@ -1,7 +1,7 @@
 <?php
 include('../db.php');
 session_start();
-header("Access-Control-Allow-Origin: https://152.42.242.10");
+header("Access-Control-Allow-Origin: http://152.42.242.10");
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
