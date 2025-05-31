@@ -1,7 +1,7 @@
 // Set headers for JSON output and CORS
-//header'Content-Type: application/json');
-header("Access-Control-Allow-Origin: *");
-//header("Access-Control-Allow-Credentials: true");
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: 157.230.245.190:8000');
+header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 

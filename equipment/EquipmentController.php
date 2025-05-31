@@ -7,11 +7,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//header'Content-Type: application/json');
-//header'Access-Control-Allow-Origin: *');
-//header'Access-Control-Allow-Credentials: true');
-//header'Access-Control-Allow-Headers: Content-Type');
-//header'Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: 157.230.245.190:8000');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();

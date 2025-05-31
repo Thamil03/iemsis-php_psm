@@ -2,8 +2,8 @@
 session_start();
 include('../db.php');
 
-header("Access-Control-Allow-Origin: *");
-//header("Access-Control-Allow-Credentials: true");
+header('Access-Control-Allow-Origin: 157.230.245.190:8000');
+header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET");
 header("Content-Type: application/json");
