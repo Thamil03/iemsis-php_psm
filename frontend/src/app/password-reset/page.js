@@ -25,7 +25,7 @@ export default function PasswordReset() {
     // We'll make an API call to check if password reset is required for current session
     const checkResetStatus = async () => {
       try {
-        const res = await fetch('http://157.230.245.190:8000/auth/check_reset_status.php', {
+        const res = await fetch('http://188.166.198.83:8000/auth/check_reset_status.php', {
           method: 'GET',
           credentials: 'include', // Important to send cookies/session
         });
@@ -66,7 +66,7 @@ export default function PasswordReset() {
     }
 
     try {
-      const res = await fetch('http://157.230.245.190:8000/auth/reset_password.php', {
+      const res = await fetch('http://188.166.198.83:8000/auth/reset_password.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

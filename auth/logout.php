@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-header('Access-Control-Allow-Origin: http://157.230.245.190:3000');
+header('Access-Control-Allow-Origin: https://iemsweb.online');
 header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
