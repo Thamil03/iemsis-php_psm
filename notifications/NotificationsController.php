@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: http://188.166.198.83');
+header('Access-Control-Allow-Origin: http://157.230.245.190:3000');
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
