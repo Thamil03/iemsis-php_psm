@@ -16,7 +16,7 @@ export default function NotificationsPage() {
   });
 
   const baseUrl =
-    "http://157.230.245.190:8001/notifications/NotificationsController.php";
+    "http://143.198.93.191:8001/notifications/NotificationsController.php";
 
   useEffect(() => {
     fetchNotifications();

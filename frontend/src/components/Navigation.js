@@ -14,7 +14,7 @@ export default function Navigation() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://157.230.245.190:8001/auth/session.php", {
+        const res = await fetch("http://143.198.93.191:8001/auth/session.php", {
           credentials: "include",
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function Navigation() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://157.230.245.190:8001/auth/logout.php", {
+      await fetch("http://143.198.93.191:8001/auth/logout.php", {
         method: "POST",
         credentials: "include",
       });
