@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
   // Check login session
   useEffect(() => {
-    fetch('http://143.198.93.191:8001/auth/session.php', {
+    fetch('https://iemsweb.online/iemsis-php_psm/auth/session.php', {
       credentials: 'include'
     })
       .then(res => res.json())
@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const res = await fetch('http://143.198.93.191:8001/auth/login.php', {
+    const res = await fetch('https://iemsweb.online/iemsis-php_psm/auth/login.php', {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (name, email, password) => {
-    const res = await fetch('http://143.198.93.191:8001/auth/register.php', {
+    const res = await fetch('https://iemsweb.online/iemsis-php_psm/auth/register.php', {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await fetch('http://143.198.93.191:8001/auth/logout.php', {
+    await fetch('https://iemsweb.online/iemsis-php_psm/auth/logout.php', {
       method: 'POST',
       credentials: 'include'
     });
