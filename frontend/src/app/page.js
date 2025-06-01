@@ -412,12 +412,8 @@ export default function Home() {
                     <div className="space-y-2">
                       <p><strong>No. Resit:</strong> {searchResult.noResit}</p>
                       <p><strong>Nama:</strong> {searchResult.name}</p>
-                      <p>
-                        <strong>Lokasi Cawangan:</strong>{" "}
-                        {searchResult.branch}, {searchResult.location}
-                      </p>
-                      <p><strong>Lokasi:</strong> {searchResult.branch}</p>
-                      <p><strong>Cawangan:</strong> {searchResult.location}</p>
+                      <p><strong>Lokasi:</strong> {searchResult.location}</p>
+                      <p><strong>Cawangan:</strong> {searchResult.branch}</p>
                       <p><strong>Nama Peralatan:</strong> {searchResult.deviceName}</p>
                       <p><strong>No. Siri:</strong> {searchResult.noSiri}</p>
                       <p><strong>No. Kew PA:</strong> {searchResult.noKewPA}</p>
