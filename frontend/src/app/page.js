@@ -371,11 +371,8 @@ export default function Home() {
                       <div className="space-y-2">
                         <p><strong>No. Resit:</strong> {item.noResit}</p>
                         <p><strong>Nama:</strong> {item.name}</p>
-                        <p>
-                          <strong>Lokasi Cawangan:</strong>{" "}
-                          {item.branch}, {item.location}
-                        </p>
-                        <p><strong>Nama Peralatan:</strong> {item.deviceName}</p>
+                        <p><strong>Lokasi:</strong> {item.location}</p>
+                        <p><strong>Cawangan:</strong> {item.branch}</p>
                         <p><strong>Nama Peralatan:</strong> {item.deviceName}</p>
                         <p><strong>No. Siri:</strong> {item.noSiri}</p>
                         <p><strong>No. Kew PA:</strong> {item.noKewPA}</p>
