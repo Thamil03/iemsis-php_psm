@@ -11,7 +11,7 @@ require_once __DIR__ . '/../config/session.php';
 
 // Set headers for JSON output and CORS
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://iemsweb.online');
+header('Access-Control-Allow-Origin: http://143.198.93.191:3000');
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");

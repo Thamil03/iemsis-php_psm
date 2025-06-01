@@ -13,7 +13,7 @@ export default function ForgotPassword() {
       return;
     }
     try {
-      const res = await fetch('https://iemsweb.online/auth/forgot_password.php', {
+      const res = await fetch('http://143.198.93.191:8001/auth/forgot_password.php', {
         method: 'POST',
         credentials: "include",
         headers: { 'Content-Type': 'application/json' },
