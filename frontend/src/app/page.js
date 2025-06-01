@@ -376,6 +376,7 @@ export default function Home() {
                           {item.branch}, {item.location}
                         </p>
                         <p><strong>Nama Peralatan:</strong> {item.deviceName}</p>
+                        <p><strong>Nama Peralatan:</strong> {item.deviceName}</p>
                         <p><strong>No. Siri:</strong> {item.noSiri}</p>
                         <p><strong>No. Kew PA:</strong> {item.noKewPA}</p>
                         <p><strong>Masalah:</strong> {item.problem}</p>
